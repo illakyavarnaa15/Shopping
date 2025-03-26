@@ -1,19 +1,22 @@
 import "./Login.css";
-import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-
+  localStorage.setItem("header", "true");
+  localStorage.setItem("footer", "true");
   const onNext = () => {
+    localStorage.setItem("footer", "false");
+    localStorage.setItem("header", "false");
     navigate("/shopping");
   };
   return (
     <div className="container" style={{ padding: "10px" }}>
-      <div className="box">
-        <div className="header">
+      <div className="box1">
+        <div>
           <div className="text">Login</div>
           <div className="underline"></div>
         </div>
@@ -27,31 +30,28 @@ const Login = () => {
             className="logininput"
             style={{
               gap: "10px",
+              padding: "10px",
             }}
           >
-            {/* <img src={email_icon} alt="" /> */}
-            <EmailIcon
-              sx={{
-                color: "black",
-                padding: "10px",
-              }}
-            />
             <input type="email" placeholder="Email ID" />
           </div>
           <div
             className="logininput"
             style={{
               gap: "10px",
+              padding: "10px",
             }}
           >
             {/* <img src={password_icon} alt="" /> */}
-            <LockIcon
-              sx={{
-                color: "black",
-                padding: "10px",
-              }}
-            />
             <input type="password" placeholder="Password" />
+            {
+              <VisibilityOffIcon
+                sx={{
+                  color: "black",
+                  padding: "10px",
+                }}
+              />
+            }
           </div>
         </div>
 
@@ -67,4 +67,5 @@ const Login = () => {
     </div>
   );
 };
+
 export default Login;

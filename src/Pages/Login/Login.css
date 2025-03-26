@@ -1,7 +1,7 @@
 .container{
     display: "flex";
     flex-direction: column;
-    background:#fafafa;
+    background:#fffdfd;
     justify-content: center;
     margin-left: 650px;
     text-align: center;
@@ -14,16 +14,13 @@
     width:100%;
 }
 .text{
-    color:#613beb;
+    color:#000000;
     font-size:80px;
     font-weight:700;
     text-align: center;
-}
-.underline{
-    width:90px;
-    height:10px;
-    background:#613beb;
-    border-radius:9px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .logininputs{
     margin-top:55px;
@@ -50,6 +47,6 @@
     background: transparent;
     border:none;
     outline: none;
-    color:rgb(90, 170, 240);
+    color:rgb(0, 0, 0);
     font-size:19px;
 }
