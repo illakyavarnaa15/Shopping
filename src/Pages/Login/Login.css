@@ -1,10 +1,29 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family:Arial,snns-serif;
+    background: #ffffff;
+}
 .container{
     display: "flex";
+    margin-top: 10em;
     flex-direction: column;
-    background:#fffdfd;
+    background:#ffffff;
     justify-content: center;
-    margin-left: 650px;
     text-align: center;
+    border-color: #505050;
+    box-shadow: #ffff;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+.box1{
+    border-radius: "6px";
+    border: "solid 5px #acaaaa";
+    box-shadow:"#acaaaa";
+    border: 1px solid rgb(168, 168, 168);
+  box-sizing: border-box;
 }
 .header{
     display:flex;
@@ -14,19 +33,22 @@
     width:100%;
 }
 .text{
-    color:#000000;
-    font-size:80px;
-    font-weight:700;
+    color:#ffffff;
+    background-color: black;
+    font-size:50px;
+    font-weight:500;
     text-align: center;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 15px 0;
+    border-radius:6px 6px 0 0;
 }
 .logininputs{
-    margin-top:55px;
+    margin-top:28px;
     display:flex;
     flex-direction:column;
-    gap:25px;
+    gap:0px;
 }
 .logininput{
     display:flex;
@@ -35,17 +57,18 @@
     margin:auto;
     width: 480px;
     height: 80px;
-    background:#f0edef;
+    background:#ffffff;
     border-radius:6px;
 }
 .logininput img{
     margin: 0px 30px;
+    width: 20px;
 }
 .logininput input{
     height: 50px;
-    width:400px;
-    background: transparent;
-    border:none;
+    width:470px;
+    background: white;
+    border:black;
     outline: none;
     color:rgb(0, 0, 0);
     font-size:19px;

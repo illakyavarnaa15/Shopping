@@ -1,32 +1,46 @@
-import Chocolate from "../../assets/chocolate.jpeg";
-import Biscuit from "../../assets/Biscuit.jpeg";
-import Maggi from "../../assets/Mggi.jpeg";
+import Watch from "../../assets/ssonata.webp";
+import Watch2 from "../../assets/rolex.webp";
+import Watch3 from "../../assets/watch3.png";
 
 const Shopping = [
   {
     id: 1,
-    title: "Chocolate",
-    image: Chocolate,
-    description:
-      "Chocolate is a food product derived from roasted and ground cocoa beans",
-    price: 100,
+    title: "LUMINOR MARINA",
+    image: Watch,
+    Brand: "Panerai",
+    Ref: "PAM",
+    DailColor: "Blue Dail",
+    Box: "No",
+    Warranty: "No",
+    WarrantyYear: "-",
+    Condition: "Pre-Owned",
+    Price: "$3,35,000",
   },
   {
     id: 2,
-    title: "Biscuit",
-    image: Biscuit,
-    description:
-      "Biscuits are small, baked, flour-based products, often flat and crisp",
-    price: 25,
+    title: "DATEJUST",
+    image: Watch2,
+    Brand: "Rolex",
+    Ref: "69173",
+    DailColor: "Champagne Dail",
+    Box: "No",
+    Warranty: "No",
+    WarrantyYear: "-",
+    Condition: "New",
+    Price: "$1,25,000",
   },
   {
     id: 3,
-    title: "Maggi",
-    image: Maggi,
-    description:
-      "An international brand of seasonings, instant soups, and noodles",
-    price: 60,
+    title: "AUTOMATIC WATCH",
+    image: Watch3,
+    Brand: "Omega Seamaster",
+    Ref: "38301929",
+    DailColor: "Black dial",
+    Box: "No",
+    Warranty: "No",
+    WarrantyYear: "-",
+    Condition: "New",
+    Price: "$75,000",
   },
 ];
-
 export default Shopping;

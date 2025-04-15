@@ -1,9 +1,8 @@
 import "./Login.css";
-import LockIcon from "@mui/icons-material/Lock";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import Paper from "@mui/material/Paper";
 const Login = () => {
   const navigate = useNavigate();
   localStorage.setItem("header", "true");
@@ -14,56 +13,86 @@ const Login = () => {
     navigate("/shopping");
   };
   return (
-    <div className="container" style={{ padding: "10px" }}>
-      <div className="box1">
+    <div className="container">
+      <Paper elevation={5} className="box1" style={{ width: "1000px" }}>
         <div>
-          <div className="text">Login</div>
-          <div className="underline"></div>
-        </div>
-        <div
-          className="logininputs"
-          style={{
-            padding: "30px",
-          }}
-        >
-          <div
-            className="logininput"
-            style={{
-              gap: "10px",
-              padding: "10px",
-            }}
-          >
-            <input type="email" placeholder="Email ID" />
+          <div>
+            <div className="text">Login</div>
           </div>
           <div
-            className="logininput"
+            className="logininputs"
             style={{
-              gap: "10px",
-              padding: "10px",
+              padding: "20px",
             }}
           >
-            {/* <img src={password_icon} alt="" /> */}
-            <input type="password" placeholder="Password" />
-            {
-              <VisibilityOffIcon
-                sx={{
-                  color: "black",
-                  padding: "10px",
-                }}
+            <div
+              className="logininput"
+              style={{
+                gap: "10px",
+                padding: "10px",
+              }}
+            >
+              <TextField
+                variant="standard"
+                type="email"
+                placeholder="Email ID"
               />
-            }
+            </div>
+            <div
+              className="logininput"
+              style={{
+                gap: "10px",
+                padding: "10px",
+              }}
+            >
+              {/* <img src={password_icon} alt="" /> */}
+              <TextField
+                variant="standard"
+                type="password"
+                placeholder="Password"
+              />
+              {
+                <VisibilityOffIcon
+                  sx={{
+                    color: "black",
+                    fontSize: "1.5rem",
+                  }}
+                />
+              }
+            </div>
+          </div>
+
+          <div
+            className="submit-coitainer"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              onClick={onNext}
+              sx={{
+                backgroundColor: "rgb(241, 186, 6);",
+                width: "800px",
+                padding: "5px 0",
+                color: "black",
+                "&:hover": {
+                  backgroundColor: "rgb(241, 186, 6)",
+                },
+              }}
+            >
+              Login
+            </Button>
+          </div>
+          <div>
+            <h3>
+              Not a Member?{" "}
+              <span style={{ color: "rgb(241, 186, 6)" }}>Sign Up </span>
+            </h3>
           </div>
         </div>
-
-        <div
-          className="submit-coitainer"
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <Button variant="contained" onClick={onNext}>
-            Login
-          </Button>
-        </div>
-      </div>
+      </Paper>
     </div>
   );
 };

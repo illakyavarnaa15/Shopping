@@ -7,8 +7,6 @@ import Footer from "./Pages/Footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Header />
     <App />
-    <Footer />
   </StrictMode>
 );

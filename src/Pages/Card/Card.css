@@ -1,12 +1,7 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
+
 .box.card{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: #ffffff;
     display:flex;
     gap:40px;
@@ -17,11 +12,9 @@
 .box{
     background: #fffefe;
     text-align: center;
-    height: fit-content;
     border: solid 3px;
     padding: 10px;
     display: flex;
-    gap:70px;
 }
 .box.card:hover{
     box-shadow: rgba(17,12,46,0.15)0px 48px 100px 0px;
@@ -32,7 +25,7 @@
     background-color: #111;
 }
 .card.image{
-    width: 80%;
+    width: 100%;
     background: #000000;   
     margin: 10px auto 25px;
     position: relative;
