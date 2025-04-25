@@ -10,7 +10,10 @@
 .bodycontainer{
     min-height: calc(100vh-100px);
     margin-top: 8rem !important;
+    text-align: left;
     width: 94%;
+    margin-left: 140px;
+    margin-right: 177px;
     margin: auto;
     flex-grow: 1;
     overflow: auto;

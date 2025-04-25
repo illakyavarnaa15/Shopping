@@ -19,8 +19,9 @@ function Header() {
             <AccountCircleIcon
               style={{
                 verticalAlign: "middle",
-                marginRight: "1px",
+                marginRight: "0px",
                 fontSize: "2.5rem",
+                color: "#CEA05F",
               }}
             />
             LOGIN
@@ -35,15 +36,11 @@ function Header() {
           <h3>MY INVENTORY</h3>
           <h3>DEALER INVENTORY</h3>
           <h3>INVOICES</h3>
-          <h3
-            style={{
-              color: "#f1ba06",
-            }}
-          >
+          <h3>
             <AccountCircleIcon
               sx={{
                 verticalAlign: "middle",
-                marginRight: "1px",
+                color: "#CEA05F",
                 fontSize: "2.5rem",
               }}
             />

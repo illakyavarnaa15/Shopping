@@ -1,9 +1,13 @@
 import "./Login.css";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { Button, TextField } from "@mui/material";
+import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Paper from "@mui/material/Paper";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { useState } from "react";
+
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   localStorage.setItem("header", "true");
   localStorage.setItem("footer", "true");
@@ -11,6 +15,10 @@ const Login = () => {
     localStorage.setItem("footer", "false");
     localStorage.setItem("header", "false");
     navigate("/shopping");
+  };
+
+  const handleClickShowPassword = () => {
+    setShowPassword((show) => !show);
   };
   return (
     <div className="container">
@@ -48,17 +56,18 @@ const Login = () => {
               {/* <img src={password_icon} alt="" /> */}
               <TextField
                 variant="standard"
-                type="password"
                 placeholder="Password"
+                type={showPassword ? "text" : "password"}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={handleClickShowPassword}>
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
               />
-              {
-                <VisibilityOffIcon
-                  sx={{
-                    color: "black",
-                    fontSize: "1.5rem",
-                  }}
-                />
-              }
             </div>
           </div>
 
@@ -73,12 +82,12 @@ const Login = () => {
               variant="contained"
               onClick={onNext}
               sx={{
-                backgroundColor: "rgb(241, 186, 6);",
+                backgroundColor: "#CEA05F;",
                 width: "800px",
                 padding: "5px 0",
                 color: "black",
                 "&:hover": {
-                  backgroundColor: "rgb(241, 186, 6)",
+                  backgroundColor: "#CEA05F",
                 },
               }}
             >
@@ -87,8 +96,7 @@ const Login = () => {
           </div>
           <div>
             <h3>
-              Not a Member?{" "}
-              <span style={{ color: "rgb(241, 186, 6)" }}>Sign Up </span>
+              Not a Member? <span style={{ color: "#CEA05F" }}>Sign Up </span>
             </h3>
           </div>
         </div>
